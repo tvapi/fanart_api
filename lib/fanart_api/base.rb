@@ -11,4 +11,8 @@ class FanartApi::Base
   def api_key
     @client.api_key
   end
+
+  def shared_uri(id, type, sort, limit)
+    "/#{api_key}/#{id}/json/#{type}/#{sort}/#{limit}"
+  end
 end
