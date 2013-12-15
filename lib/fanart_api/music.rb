@@ -1,15 +1,13 @@
 # documentation: http://fanart.tv/api-docs/music-api
 class FanartApi::Music < FanartApi::Base
-  def artist(id, type = 'all', sort = '1', limit = '2')
-    self.class.get("artist#{shared_uri(id, type, sort, limit)}")
-  end
+  def initialize(client)
+    super(client)
 
-  def album(id, type = 'all', sort = '1', limit = '2')
-    self.class.get("album#{shared_uri(id, type, sort, limit)}")
-  end
-
-  def label(id, type = 'all', sort = '1', limit = '2')
-    self.class.get("label#{shared_uri(id, type, sort, limit)}")
+    [:artist, :album, :label].each do |method_name|
+      define_method(method_name) do |id, type = 'all', sort = '1', limit = '2'|
+        self.class.get("#{method_name}#{shared_uri(id, type, sort, limit)}")
+      end
+    end
   end
 
   def update(timestamp = (Time.now - 172800).to_i)
