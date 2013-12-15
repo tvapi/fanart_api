@@ -1,24 +1,60 @@
+[![Build Status](https://travis-ci.org/wafcio/fanart_api.png?branch=master)](https://travis-ci.org/wafcio/fanart_api)
+[![Dependency Status](https://gemnasium.com/wafcio/fanart_api.png)](https://gemnasium.com/wafcio/fanart_api)
+[![Code Climate](https://codeclimate.com/github/wafcio/fanart_api.png)](https://codeclimate.com/github/wafcio/fanart_api)
+[![Coverage Status](https://coveralls.io/repos/wafcio/fanart_api/badge.png)](https://coveralls.io/r/wafcio/fanart_api)
+
 # FanartApi
 
-TODO: Write a gem description
+Ruby client for fanart.tv API
 
-## Installation
+## Getting started
 
-Add this line to your application's Gemfile:
+You can add it to your Gemfile with:
 
-    gem 'fanart_api'
+```ruby
+gem 'fanart_api'
+```
 
-And then execute:
+Run the bundle command to install it.
 
-    $ bundle
+```console
+rails generate fanart_api:install
+```
 
-Or install it yourself as:
+The generator will install an initializer where you must past your api_key.
 
-    $ gem install fanart_api
+## How to use
+
+There is one entry point, in initialize you can past hash with api_key value, or leave empty:
+
+```ruby
+client = FanartApi::Client.new('API_KEY')
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Movie API
+
+```ruby
+client.movie.find(id, type = 'all', sort = '1', limit = '2')
+client.movie.update(timestamp)
+```
+
+Music API
+
+```ruby
+client.music.artist(id, type = 'all', sort = '1', limit = '2')
+client.music.album(id, type = 'all', sort = '1', limit = '2')
+client.music.label(id, type = 'all', sort = '1', limit = '2')
+client.music.update(timestamp)
+```
+
+Tv API
+
+```ruby
+client.tv.find(id, type = 'all', sort = '1', limit = '2')
+client.tv.update(timestamp)
+```
 
 ## Contributing
 

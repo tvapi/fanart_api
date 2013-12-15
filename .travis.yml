@@ -1,0 +1,4 @@
+language: ruby
+script: 'bundle exec rspec spec/fanart_api'
+rvm:
+  - 2.0.0
