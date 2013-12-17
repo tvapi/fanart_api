@@ -13,7 +13,7 @@ describe FanartApi::Base do
     end
 
     it 'should set api_key' do
-      klass.new(FanartApi::Client.new('API_KEY')).api_key.should == 'API_KEY'
+      klass.new(FanartApi::Client.new(api_key: 'API_KEY')).api_key.should == 'API_KEY'
     end
   end
 

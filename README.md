@@ -29,7 +29,7 @@ The generator will install an initializer where you must past your api_key.
 There is one entry point, in initialize you can past hash with api_key value, or leave empty:
 
 ```ruby
-client = FanartApi::Client.new('API_KEY')
+client = FanartApi::Client.new(api_key: 'API_KEY')
 ```
 
 ## Usage
