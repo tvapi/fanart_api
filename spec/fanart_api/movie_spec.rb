@@ -7,7 +7,7 @@ describe FanartApi::Movie do
 
   describe '.find' do
     it 'should call get with specific params' do
-      model.should_receive(:get).with('movies/{api_key}/{id}/json/{type}/{sort}/{limit}').and_return(mock_model)
+      model.should_receive(:get).with('movie/{api_key}/{id}/json/{type}/{sort}/{limit}').and_return(mock_model)
 
       model.find('1234')
     end
