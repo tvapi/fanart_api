@@ -4,7 +4,7 @@ class FanartApi::Client
   attr_reader :api_key
 
   def initialize(options = {})
-    @api_key = options[:api_key] ? options[:api_key] : FanartApi::Configuration.api_key
+    @api_key = options[:api_key]
   end
 
   def movie
