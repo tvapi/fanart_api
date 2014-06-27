@@ -1,10 +1,10 @@
-require 'httparty'
-
 class FanartApi::Client
-  attr_reader :api_key
+  attr_reader :options
 
   def initialize(options = {})
-    @api_key = options[:api_key]
+    @options = options
+
+    @options[:adapter] ||= :net_http
   end
 
   def movie

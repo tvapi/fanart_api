@@ -1,0 +1,36 @@
+{
+  "series":"Bones",
+  "clearlogos":[
+    {
+      "id":"13571",
+      "url":"http:\/\/fanart.tv\/tv\/75682\/clearlogo\/bones-4e764b27c454d.png",
+      "lang":"ar",
+      "likes":"0"
+    }
+  ],
+  "cleararts":[
+    {
+      "id":"11780",
+      "url":"http:\/\/fanart.tv\/tv\/75682\/clearart\/bones-4df372a733e83.png",
+      "lang":"en",
+      "likes":"0"
+    }
+  ],
+  "tvthumbs":[
+    {
+      "id":"4321",
+      "url":"http:\/\/fanart.tv\/tv\/75682\/tvthumb\/B_75682.jpg",
+      "lang":"en",
+      "likes":"0"
+    }
+  ],
+  "seasonthumbs":[
+    {
+      "id":"4308",
+      "url":"http:\/\/fanart.tv\/tv\/75682\/seasonthumb\/Bones (7).jpg",
+      "lang":"en",
+      "likes":"0",
+      "season":"3"
+    }
+  ]
+}

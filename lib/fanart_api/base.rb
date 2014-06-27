@@ -1,47 +1,35 @@
-require 'httparty'
-require 'uri_template'
+require 'service_api'
 
 class FanartApi::Base
-  include HTTParty
-  base_uri 'http://api.fanart.tv/webservice//'
+  include ServiceApi::BaseFaraday
 
-  def initialize(client)
-    @client = client
-    @params = {}
+  def api_key_options
+    { api_key: @client.options[:api_key] }
   end
 
-  def get(uri)
-    @uri_template = URITemplate.new(uri)
-
-    self
+  def path_with_params(path, options)
+    path(path).params(api_key_options.merge(options))
   end
 
-  def params(options)
-    @params = options
-
-    self
+  def find_path
+    ':kind/:api_key/:id/json/:type/:sort/:limit'
   end
 
-  def response
-    @uri_template ? self.class.get(uri, body: @options) : nil
+  def update_path
+    ':kind/:api_key/:timestamp'
   end
 
-  def prepare_uri
-    @uri_template ? @uri_template.expand(@params.merge(api_key: @client.api_key)) : nil
+  private
+
+  def uri_kind
+    :colon
   end
 
-  def uri
-    uri = prepare_uri
-    @params.reject!{ |param| restful_param_keys(uri).include?(param.to_s) }
-
-    uri
+  def base_url
+    'http://api.fanart.tv/webservice/'
   end
 
-  def restful_param_keys(uri_expanded)
-    @uri_template.extract(uri_expanded).keys
-  end
-
-  def shared_uri
-    '{api_key}/{id}/json/{type}/{sort}/{limit}'
-  end
+  # def shared_uri
+  #   '{api_key}/{id}/json/{type}/{sort}/{limit}'
+  # end
 end
