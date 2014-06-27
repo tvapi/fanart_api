@@ -8,7 +8,7 @@ describe FanartApi::Movie do
 
   let(:faraday_stubs) do
     Faraday::Adapter::Test::Stubs.new do |stub|
-      stub.get('/webservice/movies/123456789/1234/json/all/1/2') { [200, { content_type: 'json' }, movies_data] }
+      stub.get('/webservice/movie/123456789/1234/json/all/1/2') { [200, { content_type: 'json' }, movies_data] }
       stub.get('/webservice/newmovies/123456789/123') { [200, { content_type: 'json' }, {}] }
     end
   end
@@ -25,7 +25,7 @@ describe FanartApi::Movie do
 
   describe '.find_url' do
     it 'should return correct url' do
-      model.find_url(id: 1234, type: 'all', sort: '1', limit: 2).should == 'http://api.fanart.tv/webservice/movies/123456789/1234/json/all/1/2'
+      model.find_url(id: 1234, type: 'all', sort: '1', limit: 2).should == 'http://api.fanart.tv/webservice/movie/123456789/1234/json/all/1/2'
     end
   end
 

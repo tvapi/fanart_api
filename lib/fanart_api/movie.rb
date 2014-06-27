@@ -19,7 +19,7 @@ class FanartApi::Movie < FanartApi::Base
   private
 
   def find_path_with_params(options)
-    path_with_params(find_path, options.merge(kind: :movies))
+    path_with_params(find_path, options.merge(kind: :movie))
   end
 
   def update_path_with_params(options)
