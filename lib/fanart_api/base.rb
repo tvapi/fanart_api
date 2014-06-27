@@ -19,6 +19,14 @@ class FanartApi::Base
     ':kind/:api_key/:timestamp'
   end
 
+  def default_options
+    {
+      type: 'all',
+      sort: 1,
+      limit: 2
+    }
+  end
+
   private
 
   def uri_kind

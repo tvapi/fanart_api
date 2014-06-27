@@ -19,10 +19,10 @@ class FanartApi::Tv < FanartApi::Base
   private
 
   def find_path_with_params(options)
-    path_with_params(find_path, options.merge(kind: :series))
+    path_with_params(find_path, default_options.merge(options.merge(kind: :series)))
   end
 
   def update_path_with_params(options)
-    path_with_params(update_path, options.merge(kind: :newtv))
+    path_with_params(update_path, default_options.merge(options.merge(kind: :newtv)))
   end
 end
