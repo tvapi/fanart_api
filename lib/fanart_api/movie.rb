@@ -23,6 +23,6 @@ class FanartApi::Movie < FanartApi::Base
   end
 
   def update_path_with_params(options)
-    path_with_params(update_path, default_options.merge(options.merge(kind: :newmovies)))
+    path_with_params(update_path, options.merge(kind: :newmovies))
   end
 end

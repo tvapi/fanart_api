@@ -47,6 +47,6 @@ class FanartApi::Music < FanartApi::Base
   end
 
   def update_path_with_params(options)
-    path_with_params(update_path, default_options.merge(options.merge(kind: :newmusic)))
+    path_with_params(update_path, options.merge(kind: :newmusic))
   end
 end

@@ -23,6 +23,6 @@ class FanartApi::Tv < FanartApi::Base
   end
 
   def update_path_with_params(options)
-    path_with_params(update_path, default_options.merge(options.merge(kind: :newtv)))
+    path_with_params(update_path, options.merge(kind: :newtv))
   end
 end
