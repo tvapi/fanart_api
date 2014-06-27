@@ -1,4 +1,4 @@
 language: ruby
-script: 'bundle exec rspec spec/fanart_api'
+script: 'bundle exec rspec spec/functionals'
 rvm:
   - 2.0.0
