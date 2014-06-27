@@ -16,14 +16,6 @@ You can add it to your Gemfile with:
 gem 'fanart_api'
 ```
 
-Run the bundle command to install it.
-
-```console
-rails generate fanart_api:install
-```
-
-The generator will install an initializer where you must past your api_key.
-
 ## How to use
 
 There is one entry point, in initialize you can past hash with api_key value, or leave empty:
@@ -37,24 +29,24 @@ client = FanartApi::Client.new(api_key: 'API_KEY')
 Movie API
 
 ```ruby
-client.movie.find(id, type = 'all', sort = '1', limit = '2')
-client.movie.update(timestamp)
+client.movie.find(id: id, type: 'all', sort: '1', limit: '2')
+client.movie.update(timestamp: 1...)
 ```
 
 Music API
 
 ```ruby
-client.music.artist(id, type = 'all', sort = '1', limit = '2')
-client.music.album(id, type = 'all', sort = '1', limit = '2')
-client.music.label(id, type = 'all', sort = '1', limit = '2')
-client.music.update(timestamp)
+client.music.artist(id: id, type: 'all', sort: '1', limit: '2')
+client.music.album(id: id, type: 'all', sort: '1', limit: '2')
+client.music.label(id: id, type: 'all', sort: '1', limit: '2')
+client.music.update(timestamp: 1...)
 ```
 
 Tv API
 
 ```ruby
-client.tv.find(id, type = 'all', sort = '1', limit = '2')
-client.tv.update(timestamp)
+client.tv.find(id: id, type: 'all', sort: '1', limit: '2')
+client.tv.update(timestamp: 1...)
 ```
 
 ## Contributing
