@@ -8,6 +8,9 @@
 
 Ruby client for fanart.tv API
 
+fanart.tv APIv2 - FanartApi gem v0.1.x (lastest v0.1.3)
+fanart.tv APIv3 - FanartApi gem v0.2.x (from v0.2.0)
+
 ## Getting started
 
 You can add it to your Gemfile with:
