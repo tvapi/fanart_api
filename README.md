@@ -24,29 +24,35 @@ There is one entry point, in initialize you can past hash with api_key value, or
 client = FanartApi::Client.new(api_key: 'API_KEY')
 ```
 
+Optional you can add option proxy: false which will not send request to proxy.
+
+```ruby
+client = FanartApi::Client.new(api_key: 'API_KEY', proxy: false)
+```
+
 ## Usage
 
 Movie API
 
 ```ruby
-client.movie.find(id: id, type: 'all', sort: '1', limit: '2')
-client.movie.update(timestamp: 1...)
+client.movie.find(id: id)
+client.movie.latest(date: 1...)
 ```
 
 Music API
 
 ```ruby
-client.music.artist(id: id, type: 'all', sort: '1', limit: '2')
-client.music.album(id: id, type: 'all', sort: '1', limit: '2')
-client.music.label(id: id, type: 'all', sort: '1', limit: '2')
-client.music.update(timestamp: 1...)
+client.music.artist(id: id)
+client.music.album(id: id)
+client.music.label(id: id)
+client.music.latest(date: 1...)
 ```
 
 Tv API
 
 ```ruby
-client.tv.find(id: id, type: 'all', sort: '1', limit: '2')
-client.tv.update(timestamp: 1...)
+client.tv.find(id: id)
+client.tv.latest(date: 1...)
 ```
 
 ## Contributing

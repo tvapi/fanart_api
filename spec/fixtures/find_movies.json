@@ -1,32 +1,79 @@
 {
-  "The Lord of the Rings: The Fellowship of the Ring": {
-    "tmdb_id": "120",
-    "imdb_id": "tt0120737",
-    "moviedisc": [
-      {
-        "id": "101",
-        "url": "http://fanart.tv/fanart/movies/120/moviedisc/101/the-lord-of-the-rings-the-fellowship-of-the-ring-4eea008189187.png",
-        "lang": "en",
-        "likes": "0",
-        "disc": "1",
-        "disc_type": "bluray"
-      },
-      {
-        "id": "102",
-        "url": "http://fanart.tv/fanart/movies/120/moviedisc/102/the-lord-of-the-rings-the-fellowship-of-the-ring-4eea017193bf6.png",
-        "lang": "en",
-        "likes": "0",
-        "disc": "2",
-        "disc_type": "bluray"
-      }
-    ],
-    "movielogo": [
-      {
-        "id": "222",
-        "url": "http://fanart.tv/fanart/movies/120/movielogo/222/the-lord-of-the-rings-the-fellowship-of-the-ring-4ef23158be031.png",
-        "lang": "en",
-        "likes": "0"
-      }
-    ]
-  }
+  "name": "The Lord of the Rings: The Fellowship of the Ring",
+  "tmdb_id": "120",
+  "imdb_id": "tt0120737",
+  "hdmovielogo": [
+    {
+      "id": "35686",
+      "url": "http://assets.fanart.tv/fanart/movies/120/hdmovielogo/the-lord-of-the-rings-the-fellowship-of-the-ring-5199eb99bb348.png",
+      "lang": "hu",
+      "likes": "0"
+    }
+  ],
+  "moviedisc": [
+    {
+      "id": "15982",
+      "url": "http://assets.fanart.tv/fanart/movies/120/moviedisc/the-lord-of-the-rings-the-fellowship-of-the-ring-5072d26f68e75.png",
+      "lang": "fr",
+      "likes": "0",
+      "disc": "1",
+      "disc_type": "bluray"
+    }
+  ],
+  "movielogo": [
+    {
+      "id": "10233",
+      "url": "http://assets.fanart.tv/fanart/movies/120/movielogo/the-lord-of-the-rings-the-fellowship-of-the-ring-50366fc502e6d.png",
+      "lang": "fr",
+      "likes": "0"
+    }
+  ],
+  "movieposter": [
+    {
+      "id": "60802",
+      "url": "http://assets.fanart.tv/fanart/movies/120/movieposter/the-lord-of-the-rings-the-fellowship-of-the-ring-52ca39328f269.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "hdmovieclearart": [
+    {
+      "id": "46178",
+      "url": "http://assets.fanart.tv/fanart/movies/120/hdmovieclearart/the-lord-of-the-rings-the-fellowship-of-the-ring-520e7bd8dd3b5.png",
+      "lang": "de",
+      "likes": "1"
+    }
+  ],
+  "movieart": [
+    {
+      "id": "1498",
+      "url": "http://assets.fanart.tv/fanart/movies/120/movieart/the-lord-of-the-rings-the-fellowship-of-the-ring-4f76f4dac9063.png",
+      "lang": "de",
+      "likes": "1"
+    }
+  ],
+  "moviebackground": [
+    {
+      "id": "5300",
+      "url": "http://assets.fanart.tv/fanart/movies/120/moviebackground/the-lord-of-the-rings-the-fellowship-of-the-ring-4fdb8b38d794e.jpg",
+      "lang": "en",
+      "likes": "1"
+    }
+  ],
+  "moviebanner": [
+    {
+      "id": "46179",
+      "url": "http://assets.fanart.tv/fanart/movies/120/moviebanner/the-lord-of-the-rings-the-fellowship-of-the-ring-520e7bf6818ef.jpg",
+      "lang": "de",
+      "likes": "0"
+    }
+  ],
+  "moviethumb": [
+    {
+      "id": "68153",
+      "url": "http://assets.fanart.tv/fanart/movies/120/moviethumb/the-lord-of-the-rings-the-fellowship-of-the-ring-532efd41bf3ae.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ]
 }

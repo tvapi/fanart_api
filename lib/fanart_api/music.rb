@@ -24,29 +24,37 @@ class FanartApi::Music < FanartApi::Base
     label_path_with_params(options).url
   end
 
-  def update(options = {})
-    update_path_with_params(options).get
+  def latest(options = {})
+    latest_path_with_params(options).get
   end
 
-  def update_url(options = {})
-    update_path_with_params(options).url
+  def latest_url(options = {})
+    latest_path_with_params(options).url
   end
 
   private
 
   def artist_path_with_params(options)
-    path_with_params(find_path, default_options.merge(options.merge(kind: :artist)))
+    path_with_params(find_path, options.merge(kind: :music))
   end
 
   def album_path_with_params(options)
-    path_with_params(find_path, default_options.merge(options.merge(kind: :album)))
+    path_with_params(album_path, options.merge(kind: :music))
   end
 
   def label_path_with_params(options)
-    path_with_params(find_path, default_options.merge(options.merge(kind: :label)))
+    path_with_params(label_path, options.merge(kind: :music))
   end
 
-  def update_path_with_params(options)
-    path_with_params(update_path, options.merge(kind: :newmusic))
+  def latest_path_with_params(options)
+    path_with_params(latest_path, options.merge(kind: :music))
+  end
+
+  def album_path
+    ':kind/albums/:id'
+  end
+
+  def label_path
+    ':kind/labels/:id'
   end
 end

@@ -1,39 +1,70 @@
 {
-  "Evanescence": {
-    "mbid_id": "f4a31f0a-51dd-4fa7-986d-3095c40c5ed9",
-    "artistbackground": [
-      {
-        "id": "9",
-        "url": "http://fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/artistbackground/9/evanescence-4dc719c5cc68f.jpg",
-        "likes": "1"
-      }
-    ],
-    "musiclogo": [
-      {
-        "id": "5239",
-        "url": "http://fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/musiclogo/5239/evanescence-4df6263dee3c6.png",
-        "likes": "1"
-      }
-    ],
-    "albums": {
-      "2187d248-1a3b-35d0-a4ec-bead586ff547": {
-        "albumcover": [
-          {
-            "id": "43",
-            "url": "http://fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/albumcover/43/fallen-4dc8683fa58fe.jpg",
-            "likes": "0"
-          }
-        ],
-        "cdart": [
-          {
-            "id": "17739",
-            "url": "http://fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/cdart/17739/fallen-4f133f8a16d25.png",
-            "likes": "0",
-            "disc": "1",
-            "size": "1000"
-          }
-        ]
-      }
+  "name": "Evanescence",
+  "mbid_id": "f4a31f0a-51dd-4fa7-986d-3095c40c5ed9",
+  "artistbackground": [
+    {
+      "id": "130063",
+      "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/artistbackground/evanescence-53c3e2009deda.jpg",
+      "likes": "0"
     }
-  }
+  ],
+  "artistthumb": [
+    {
+      "id": "130067",
+      "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/artistthumb/evanescence-53c3e236e646b.jpg",
+      "likes": "0"
+    }
+  ],
+  "musiclogo": [
+    {
+      "id": "27702",
+      "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/musiclogo/evanescence-4f8acb2ae6002.png",
+      "likes": "1"
+    }
+  ],
+  "hdmusiclogo": [
+    {
+      "id": "127055",
+      "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/hdmusiclogo/evanescence-539db9a415d69.png",
+      "likes": "1"
+    }
+  ],
+  "albums": {
+    "2187d248-1a3b-35d0-a4ec-bead586ff547": {
+      "albumcover": [
+        {
+          "id": "43",
+          "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/albumcover/fallen-4dc8683fa58fe.jpg",
+          "likes": "1"
+        }
+      ],
+      "cdart": [
+        {
+          "id": "17739",
+          "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/cdart/fallen-4f133f8a16d25.png",
+          "likes": "0",
+          "disc": "1",
+          "size": "1000"
+        }
+      ]
+    },
+    "ac7dd865-3c32-3bb9-9241-a4c63d940f67": {
+      "cdart": [
+        {
+          "id": "1874",
+          "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/cdart/le-nouveau-gothique-4dd43ab8d1af6.png",
+          "likes": "0",
+          "disc": "1",
+          "size": "450"
+        }
+      ]
+    }
+  },
+  "musicbanner": [
+    {
+      "id": "56733",
+      "url": "http://assets.fanart.tv/fanart/music/f4a31f0a-51dd-4fa7-986d-3095c40c5ed9/musicbanner/evanescence-507beae754bf6.jpg",
+      "likes": "1"
+    }
+  ]
 }

@@ -12,19 +12,11 @@ class FanartApi::Base
   end
 
   def find_path
-    ':kind/:api_key/:id/json/:type/:sort/:limit'
+    ':kind/:id'
   end
 
-  def update_path
-    ':kind/:api_key/:timestamp'
-  end
-
-  def default_options
-    {
-      type: 'all',
-      sort: 1,
-      limit: 2
-    }
+  def latest_path
+    ':kind/latest'
   end
 
   private
@@ -34,10 +26,10 @@ class FanartApi::Base
   end
 
   def base_url
-    'http://api.fanart.tv/webservice/'
+    if @client.options[:proxy] == false
+      'http://webservice.fanart.tv/v3/'
+    else
+      'http://fanarttv.apiary-proxy.com/v3/'
+    end
   end
-
-  # def shared_uri
-  #   '{api_key}/{id}/json/{type}/{sort}/{limit}'
-  # end
 end

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "932cb13f-677c-4e63-beb1-fca45574d280",
+    "name": "Zazie",
+    "new_images": "1",
+    "total_images": "23"
+  },
+  {
+    "id": "e20747e7-55a4-452e-8766-7b985585082d",
+    "name": "Frank Zappa",
+    "new_images": "1",
+    "total_images": "71"
+  },
+  {
+    "id": "967002b0-58ef-4b22-a58c-fbc631ff695c",
+    "name": "Paul Young",
+    "new_images": "1",
+    "total_images": "10"
+  },
+  {
+    "id": "97c86b2c-2765-46a2-aef8-76a7e24c430f",
+    "name": "XTC",
+    "new_images": "10",
+    "total_images": "16"
+  }
+]

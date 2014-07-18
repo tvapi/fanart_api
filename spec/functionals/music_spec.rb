@@ -5,77 +5,78 @@ describe FanartApi::Music do
   let(:model) { client.music }
 
   let(:music_data) { File.read('spec/fixtures/artist.json') }
+  let(:latest_music_data) { File.read('spec/fixtures/latest_artist.json') }
 
   let(:faraday_stubs) do
     Faraday::Adapter::Test::Stubs.new do |stub|
-      stub.get('/webservice/artist/123456789/1234/json/all/1/2') { [200, { content_type: 'json' }, music_data] }
-      stub.get('/webservice/album/123456789/1234/json/all/1/2') { [200, { content_type: 'json' }, music_data] }
-      stub.get('/webservice/label/123456789/1234/json/all/1/2') { [200, { content_type: 'json' }, music_data] }
-      stub.get('/webservice/newmusic/123456789/123') { [200, { content_type: 'json' }, {}] }
+      stub.get('/v3/music/1234?api_key=123456789') { [200, { content_type: 'json' }, music_data] }
+      stub.get('/v3/music/albums/1234?api_key=123456789') { [200, { content_type: 'json' }, music_data] }
+      stub.get('/v3/music/labels/1234?api_key=123456789') { [200, { content_type: 'json' }, music_data] }
+      stub.get('/v3/music/latest?api_key=123456789&date=123') { [200, { content_type: 'json' }, latest_music_data] }
     end
   end
 
   describe '.artist' do
     it 'should return Faraday::Response class' do
-      model.artist(id: 1234, type: 'all', sort: '1', limit: 2).class.should == Faraday::Response
+      model.artist(id: 1234).class.should == Faraday::Response
     end
 
     it 'should return Hash class for body reponse' do
-      model.artist(id: 1234, type: 'all', sort: '1', limit: 2).body == Hash
+      model.artist(id: 1234).body == Hash
     end
   end
 
   describe '.artist_url' do
     it 'should return correct url' do
-      model.artist_url(id: 1234, type: 'all', sort: '1', limit: 2).should == 'http://api.fanart.tv/webservice/artist/123456789/1234/json/all/1/2'
+      model.artist_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/1234?api_key=123456789'
     end
   end
 
   describe '.album' do
     it 'should return Faraday::Response class' do
-      model.album(id: 1234, type: 'all', sort: '1', limit: 2).class.should == Faraday::Response
+      model.album(id: 1234).class.should == Faraday::Response
     end
 
     it 'should return Hash class for body reponse' do
-      model.album(id: 1234, type: 'all', sort: '1', limit: 2).body == Hash
+      model.album(id: 1234).body == Hash
     end
   end
 
   describe '.album_url' do
     it 'should return correct url' do
-      model.album_url(id: 1234, type: 'all', sort: '1', limit: 2).should == 'http://api.fanart.tv/webservice/album/123456789/1234/json/all/1/2'
+      model.album_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/albums/1234?api_key=123456789'
     end
   end
 
   describe '.label' do
     it 'should return Faraday::Response class' do
-      model.label(id: 1234, type: 'all', sort: '1', limit: 2).class.should == Faraday::Response
+      model.label(id: 1234).class.should == Faraday::Response
     end
 
     it 'should return Hash class for body reponse' do
-      model.label(id: 1234, type: 'all', sort: '1', limit: 2).body == Hash
+      model.label(id: 1234).body == Hash
     end
   end
 
   describe '.label_url' do
     it 'should return correct url' do
-      model.label_url(id: 1234, type: 'all', sort: '1', limit: 2).should == 'http://api.fanart.tv/webservice/label/123456789/1234/json/all/1/2'
+      model.label_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/labels/1234?api_key=123456789'
     end
   end
 
-  describe '.update' do
+  describe '.latest' do
     it 'should return Faraday::Response class' do
-      model.update(timestamp: 123).class.should == Faraday::Response
+      model.latest(date: 123).class.should == Faraday::Response
     end
 
     it 'should return Hash class for body reponse' do
-      model.update(timestamp: 123).body == Hash
+      model.latest(date: 123).body == Hash
     end
   end
 
-  describe '.update_url' do
+  describe '.latest_url' do
     it 'should return correct url' do
-      model.update_url(timestamp: 123).should == 'http://api.fanart.tv/webservice/newmusic/123456789/123'
+      model.latest_url(date: 123).should == 'http://fanarttv.apiary-proxy.com/v3/music/latest?api_key=123456789&date=123'
     end
   end
 end

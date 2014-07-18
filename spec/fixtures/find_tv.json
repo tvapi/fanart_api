@@ -1,0 +1,103 @@
+{
+  "name": "Bones",
+  "thetvdb_id": "75682",
+  "clearlogo": [
+    {
+      "id": "13571",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/clearlogo/bones-4e764b27c454d.png",
+      "lang": "ar",
+      "likes": "1"
+    }
+  ],
+  "hdtvlogo": [
+    {
+      "id": "37201",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/hdtvlogo/bones-530b4bb8bfaf7.png",
+      "lang": "he",
+      "likes": "1"
+    }
+  ],
+  "clearart": [
+    {
+      "id": "14250",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/clearart/bones-4eab178bc58f5.png",
+      "lang": "en",
+      "likes": "1"
+    }
+  ],
+  "showbackground": [
+    {
+      "id": "19406",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/showbackground/bones-5009b50a325c0.jpg",
+      "lang": "en",
+      "likes": "0",
+      "season": "6"
+    }
+  ],
+  "tvthumb": [
+    {
+      "id": "21774",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/tvthumb/bones-5070c9ec8e4de.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "seasonposter": [
+    {
+      "id": "39989",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/seasonposter/bones-536271a12e2e2.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "seasonthumb": [
+    {
+      "id": "25967",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/seasonthumb/bones-5121a2b7215d2.jpg",
+      "lang": "en",
+      "likes": "0",
+      "season": "8"
+    }
+  ],
+  "hdclearart": [
+    {
+      "id": "22606",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/hdclearart/bones-508c48e9824ae.png",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "tvbanner": [
+    {
+      "id": "40209",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/tvbanner/bones-536a839d084a7.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "characterart": [
+    {
+      "id": "22240",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/characterart/bones-507d97908963d.png",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "tvposter": [
+    {
+      "id": "36565",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/tvposter/bones-52deb10f82d0f.jpg",
+      "lang": "en",
+      "likes": "0"
+    }
+  ],
+  "seasonbanner": [
+    {
+      "id": "37718",
+      "url": "http://assets.fanart.tv/fanart/tv/75682/seasonbanner/bones-532e0883bb9d7.jpg",
+      "lang": "en",
+      "likes": "0",
+      "season": "1"
+    }
+  ]
+}
