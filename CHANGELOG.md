@@ -1,3 +1,9 @@
+## 0.3.0 (January 25, 2015)
+
+  - use ov gem for multimethod
+  - fix test for rspec 3 syntax
+  - add more tests
+
 ## 0.2.1 (September 3, 2014)
 
   - fix gemspec dependency
