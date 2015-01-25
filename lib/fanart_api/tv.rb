@@ -1,18 +1,35 @@
-# documentation: http://fanart.tv/api-docs/tv-api
 class FanartApi::Tv < FanartApi::Base
-  def find(options = {})
+  include Ov
+
+  let :find, Any do |id|
+    find(id: id)
+  end
+
+  let :find, Hash do |options|
     find_path_with_params(options).get
   end
 
-  def find_url(options = {})
+  let :find_url, Any do |id|
+    find_url(id: id)
+  end
+
+  let :find_url, Hash do |options|
     find_path_with_params(options).url
   end
 
-  def latest(options = {})
+  let :latest, Any do |date|
+    latest(date: date)
+  end
+
+  let :latest, Hash do |options|
     latest_path_with_params(options).get
   end
 
-  def latest_url(options = {})
+  let :latest_url, Any do |date|
+    latest_url(date: date)
+  end
+
+  let :latest_url, Hash do |options|
     latest_path_with_params(options).url
   end
 

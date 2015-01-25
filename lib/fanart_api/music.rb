@@ -1,34 +1,67 @@
-# documentation: http://fanart.tv/api-docs/music-api
 class FanartApi::Music < FanartApi::Base
-  def artist(options = {})
+  include Ov
+
+  let :artist, Any do |id|
+    artist(id: id)
+  end
+
+  let :artist, Hash do |options|
     artist_path_with_params(options).get
   end
 
-  def artist_url(options = {})
+  let :artist_url, Any do |id|
+    artist_url(id: id)
+  end
+
+  let :artist_url, Hash do |options|
     artist_path_with_params(options).url
   end
 
-  def album(options = {})
+  let :album, Any do |id|
+    album(id: id)
+  end
+
+  let :album, Hash do |options|
     album_path_with_params(options).get
   end
 
-  def album_url(options = {})
+  let :album_url, Any do |id|
+    album_url(id: id)
+  end
+
+  let :album_url, Hash do |options|
     album_path_with_params(options).url
   end
 
-  def label(options = {})
+  let :label, Any do |id|
+    label(id: id)
+  end
+
+  let :label, Hash do |options|
     label_path_with_params(options).get
   end
 
-  def label_url(options = {})
+  let :label_url, Any do |id|
+    label_url(id: id)
+  end
+
+  let :label_url, Hash do |options|
     label_path_with_params(options).url
   end
 
-  def latest(options = {})
+  let :latest, Any do |date|
+    latest(date: date)
+  end
+
+  let :latest, Hash do |options|
     latest_path_with_params(options).get
   end
 
-  def latest_url(options = {})
+  let :latest_url, Any do |date|
+    latest_url(date: date)
+  end
+
+  let :latest_url, Hash do |options|
     latest_path_with_params(options).url
   end
 

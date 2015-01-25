@@ -6,57 +6,90 @@
 
 # FanartApi
 
-Ruby client for fanart.tv API
+fanart_api is a simple ruby client for accessing TV shows information from the fanart.tv API.
 
-fanart.tv APIv2 - FanartApi gem v0.1.x (lastest v0.1.3)
-fanart.tv APIv3 - FanartApi gem v0.2.x (from v0.2.0)
+## Installation
 
-## Getting started
-
-You can add it to your Gemfile with:
+With Bundler:
 
 ```ruby
-gem 'fanart_api'
+gem 'thetvdb_api'
+```
+
+```ruby
+$ bundle install
+```
+
+Otherwhise:
+
+```ruby
+$ gem install thetvdb_api
 ```
 
 ## How to use
 
-There is one entry point, in initialize you can past hash with api_key value, or leave empty:
+You have two way for access to api:
 
 ```ruby
-client = FanartApi::Client.new(api_key: 'API_KEY')
+client = FanartApi::Client.new(api_key: '...')
+```
+```ruby
+client = FanartApi::Client.new(api_key: '...', proxy_url: '...')
+client.movie # => #<FanartApi::Movie>
+client.music # => #<FanartApi::Music>
+client.tv # => #<FanartApi::Tv>
 ```
 
-Optional you can add option proxy: false which will not send request to proxy.
+* II case (direct access to api class, many entry points)
+
+Language attribute is required
 
 ```ruby
-client = FanartApi::Client.new(api_key: 'API_KEY', proxy: false)
+ThetvdbApi::Actor.new(api_key: '...')
+ThetvdbApi::Banner.new(api_key: '...')
+ThetvdbApi::Episode.new(api_key: '...')
 ```
-
-## Usage
-
-Movie API
 
 ```ruby
-client.movie.find(id: id)
-client.movie.latest(date: 1...)
+ThetvdbApi::Actor.new(api_key: '...', proxy_url: '...')
+ThetvdbApi::Banner.new(api_key: '...', proxy_url: '...')
+ThetvdbApi::Episode.new(api_key: '...', proxy_url: '...')
 ```
 
-Music API
+## Methods
 
-```ruby
-client.music.artist(id: id)
-client.music.album(id: id)
-client.music.label(id: id)
-client.music.latest(date: 1...)
-```
+For all methods you can pass hash attributes or multiple attributes specified in method comment.
 
-Tv API
+### Movie methods
 
-```ruby
-client.tv.find(id: id)
-client.tv.latest(date: 1...)
-```
+For method attributes read https://github.com/tvapi/fanart_api/blob/master/lib/fanart_api/movie.rb
+
+* find
+* find_url
+* latest
+* latest_url
+
+### Music methods
+
+For method attributes read https://github.com/tvapi/fanart_api/blob/master/lib/fanart_api/music.rb
+
+* artist
+* artist_url
+* album
+* album_url
+* label
+* label_url
+* latest
+* latest_url
+
+### Tv methods
+
+For method attributes read https://github.com/tvapi/fanart_api/blob/master/lib/fanart_api/tv.rb
+
+* find
+* find_url
+* latest
+* latest_url
 
 ## Contributing
 

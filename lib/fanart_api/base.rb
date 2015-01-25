@@ -4,7 +4,7 @@ class FanartApi::Base
   include ServiceApi::BaseFaraday
 
   def api_key_options
-    { api_key: @client.options[:api_key] }
+    { api_key: @config[:api_key] }
   end
 
   def path_with_params(path, options)
@@ -26,10 +26,10 @@ class FanartApi::Base
   end
 
   def base_url
-    if @client.options[:proxy] == false
-      'http://webservice.fanart.tv/v3/'
+    if @config[:proxy_url]
+      @config[:proxy_url]
     else
-      'http://fanarttv.apiary-proxy.com/v3/'
+      'http://webservice.fanart.tv/v3/'
     end
   end
 end

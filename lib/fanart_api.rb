@@ -1,3 +1,5 @@
+require 'ov'
+
 module FanartApi; end
 
 require 'fanart_api/version'

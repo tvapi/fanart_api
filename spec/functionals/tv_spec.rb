@@ -26,7 +26,7 @@ describe FanartApi::Tv do
 
   describe '.find_url' do
     it 'should return correct url' do
-      model.find_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/tv/1234?api_key=123456789'
+      model.find_url(id: 1234).should == 'http://webservice.fanart.tv/v3/tv/1234?api_key=123456789'
     end
   end
 
@@ -42,7 +42,7 @@ describe FanartApi::Tv do
 
   describe '.latest_url' do
     it 'should return correct url' do
-      model.latest_url(date: 123).should == 'http://fanarttv.apiary-proxy.com/v3/tv/latest?api_key=123456789&date=123'
+      model.latest_url(date: 123).should == 'http://webservice.fanart.tv/v3/tv/latest?api_key=123456789&date=123'
     end
   end
 end

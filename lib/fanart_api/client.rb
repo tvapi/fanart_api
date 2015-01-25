@@ -1,21 +1,21 @@
 class FanartApi::Client
-  attr_reader :options
+  attr_reader :config
 
-  def initialize(options = {})
-    @options = options
+  def initialize(config = {})
+    @config = config
 
-    @options[:adapter] ||= :net_http
+    @config[:adapter] ||= :net_http
   end
 
   def movie
-    @movie ||= FanartApi::Movie.new(self)
+    @movie ||= FanartApi::Movie.new(config)
   end
 
   def music
-    @music ||= FanartApi::Music.new(self)
+    @music ||= FanartApi::Music.new(config)
   end
 
   def tv
-    @tv ||= FanartApi::Tv.new(self)
+    @tv ||= FanartApi::Tv.new(config)
   end
 end

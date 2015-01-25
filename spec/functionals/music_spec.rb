@@ -28,7 +28,7 @@ describe FanartApi::Music do
 
   describe '.artist_url' do
     it 'should return correct url' do
-      model.artist_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/1234?api_key=123456789'
+      model.artist_url(id: 1234).should == 'http://webservice.fanart.tv/v3/music/1234?api_key=123456789'
     end
   end
 
@@ -44,7 +44,7 @@ describe FanartApi::Music do
 
   describe '.album_url' do
     it 'should return correct url' do
-      model.album_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/albums/1234?api_key=123456789'
+      model.album_url(id: 1234).should == 'http://webservice.fanart.tv/v3/music/albums/1234?api_key=123456789'
     end
   end
 
@@ -60,7 +60,7 @@ describe FanartApi::Music do
 
   describe '.label_url' do
     it 'should return correct url' do
-      model.label_url(id: 1234).should == 'http://fanarttv.apiary-proxy.com/v3/music/labels/1234?api_key=123456789'
+      model.label_url(id: 1234).should == 'http://webservice.fanart.tv/v3/music/labels/1234?api_key=123456789'
     end
   end
 
@@ -76,7 +76,7 @@ describe FanartApi::Music do
 
   describe '.latest_url' do
     it 'should return correct url' do
-      model.latest_url(date: 123).should == 'http://fanarttv.apiary-proxy.com/v3/music/latest?api_key=123456789&date=123'
+      model.latest_url(date: 123).should == 'http://webservice.fanart.tv/v3/music/latest?api_key=123456789&date=123'
     end
   end
 end
