@@ -1,7 +1,7 @@
-[![Build Status](https://travis-ci.org/wafcio/fanart_api.png?branch=master)](https://travis-ci.org/wafcio/fanart_api)
-[![Dependency Status](https://gemnasium.com/wafcio/fanart_api.png)](https://gemnasium.com/wafcio/fanart_api)
-[![Code Climate](https://codeclimate.com/github/wafcio/fanart_api.png)](https://codeclimate.com/github/wafcio/fanart_api)
-[![Coverage Status](https://coveralls.io/repos/wafcio/fanart_api/badge.png)](https://coveralls.io/r/wafcio/fanart_api)
+[![Build Status](https://travis-ci.org/tvapi/fanart_api.png?branch=master)](https://travis-ci.org/tvapi/fanart_api)
+[![Dependency Status](https://gemnasium.com/tvapi/fanart_api.png)](https://gemnasium.com/tvapi/fanart_api)
+[![Code Climate](https://codeclimate.com/github/tvapi/fanart_api.png)](https://codeclimate.com/github/tvapi/fanart_api)
+[![Coverage Status](https://coveralls.io/repos/tvapi/fanart_api/badge.png)](https://coveralls.io/r/tvapi/fanart_api)
 [![Gem Version](https://badge.fury.io/rb/fanart_api.png)](http://badge.fury.io/rb/fanart_api)
 
 # FanartApi
