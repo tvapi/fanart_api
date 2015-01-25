@@ -15,34 +15,74 @@ describe FanartApi::Tv do
   end
 
   describe '.find' do
-    it 'should return Faraday::Response class' do
-      model.find(id: 1234).class.should == Faraday::Response
+    context 'hash attributes' do
+      it 'should return Faraday::Response class' do
+        expect(model.find(id: 1234)).to be_a(Faraday::Response)
+      end
+
+      it 'should return Hash class for body reponse' do
+        expect(model.find(id: 1234).body).to be_a(Hash)
+      end
     end
 
-    it 'should return Hash class for body reponse' do
-      model.find(id: 1234).body == Hash
+    context 'normal attributes' do
+      it 'should return Faraday::Response class' do
+        expect(model.find(1234)).to be_a(Faraday::Response)
+      end
+
+      it 'should return Hash class for body reponse' do
+        expect(model.find(1234).body).to be_a(Hash)
+      end
     end
   end
 
   describe '.find_url' do
-    it 'should return correct url' do
-      model.find_url(id: 1234).should == 'http://webservice.fanart.tv/v3/tv/1234?api_key=123456789'
+    context 'hash attributes' do
+      it 'should return correct url' do
+        expect(model.find_url(id: 1234)).to eq('http://webservice.fanart.tv/v3/tv/1234?api_key=123456789')
+      end
+    end
+
+    context 'normal attributes' do
+      it 'should return correct url' do
+        expect(model.find_url(1234)).to eq('http://webservice.fanart.tv/v3/tv/1234?api_key=123456789')
+      end
     end
   end
 
   describe '.latest' do
-    it 'should return Faraday::Response class' do
-      model.latest(date: 123).class.should == Faraday::Response
+    context 'hash attributes' do
+      it 'should return Faraday::Response class' do
+        expect(model.latest(date: 123)).to be_a(Faraday::Response)
+      end
+
+      it 'should return Hash class for body reponse' do
+        expect(model.latest(date: 123).body).to be_a(Array)
+      end
     end
 
-    it 'should return Hash class for body reponse' do
-      model.latest(date: 123).body == Array
+    context 'normal attributes' do
+      it 'should return Faraday::Response class' do
+        expect(model.latest(123)).to be_a(Faraday::Response)
+      end
+
+      it 'should return Hash class for body reponse' do
+        expect(model.latest(123).body).to be_a(Array)
+      end
     end
   end
 
   describe '.latest_url' do
-    it 'should return correct url' do
-      model.latest_url(date: 123).should == 'http://webservice.fanart.tv/v3/tv/latest?api_key=123456789&date=123'
+    context 'hash attributes' do
+      it 'should return correct url' do
+        expect(model.latest_url(date: 123)).to eq('http://webservice.fanart.tv/v3/tv/latest?api_key=123456789&date=123')
+      end
+    end
+
+    context 'normal attributes' do
+      it 'should return correct url' do
+        expect(model.latest_url(123)).to eq('http://webservice.fanart.tv/v3/tv/latest?api_key=123456789&date=123')
+      end
     end
   end
 end
