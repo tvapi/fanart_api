@@ -49,12 +49,20 @@ class FanartApi::Music < FanartApi::Base
     label_path_with_params(options).url
   end
 
+  let :latest do |date|
+    latest({})
+  end
+
   let :latest, Any do |date|
     latest(date: date)
   end
 
   let :latest, Hash do |options|
     latest_path_with_params(options).get
+  end
+
+  let :latest_url do |date|
+    latest_url({})
   end
 
   let :latest_url, Any do |date|

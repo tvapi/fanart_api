@@ -1,18 +1,30 @@
 require 'spec_helper'
 
 describe FanartApi::Movie do
-  let(:klass) { FanartApi::Movie }
-  let(:model) { klass.new(FanartApi::Client.new) }
+  let(:client) { FanartApi::Client.new(api_key: API_KEY) }
+  let(:model) { client.movie }
 
-  describe '.find' do
-    it 'should return response class' do
-      model.find('tt0120737').class.should == HTTParty::Response
+  describe 'real request' do
+    describe '.find' do
+      it 'should return response class' do
+        response = model.find('tt0120737')
+        ap response.body
+
+        expect(response).to be_a(Faraday::Response)
+        expect(response.status).to eq(200)
+        expect(response.body).to be_a(Hash)
+      end
     end
-  end
 
-  describe '.update' do
-    it 'should call get with specific uri' do
-      model.update.class.should == HTTParty::Response
+    describe '.latest' do
+      it 'should return response class' do
+        response = model.latest
+        ap response.body
+
+        expect(response).to be_a(Faraday::Response)
+        expect(response.status).to eq(200)
+        expect(response.body).to be_a(Array)
+      end
     end
   end
 end

@@ -13,6 +13,7 @@ describe FanartApi::Music do
       stub.get('/v3/music/albums/1234?api_key=123456789') { [200, { content_type: 'json' }, music_data] }
       stub.get('/v3/music/labels/1234?api_key=123456789') { [200, { content_type: 'json' }, music_data] }
       stub.get('/v3/music/latest?api_key=123456789&date=123') { [200, { content_type: 'json' }, latest_music_data] }
+      stub.get('/v3/music/latest?api_key=123456789') { [200, { content_type: 'json' }, latest_music_data] }
     end
   end
 
@@ -144,6 +145,16 @@ describe FanartApi::Music do
         expect(model.latest(123).body).to be_a(Array)
       end
     end
+
+    context 'without attributes' do
+      it 'should return Faraday::Response class' do
+        expect(model.latest).to be_a(Faraday::Response)
+      end
+
+      it 'should return Hash class for body reponse' do
+        expect(model.latest.body).to be_a(Array)
+      end
+    end
   end
 
   describe '.latest_url' do
@@ -156,6 +167,12 @@ describe FanartApi::Music do
     context 'normal attributes' do
       it 'should return correct url' do
         expect(model.latest_url(123)).to eq('http://webservice.fanart.tv/v3/music/latest?api_key=123456789&date=123')
+      end
+    end
+
+    context 'without attributes' do
+      it 'should return correct url' do
+        expect(model.latest_url).to eq('http://webservice.fanart.tv/v3/music/latest?api_key=123456789')
       end
     end
   end
